@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Mycs/layui.css" />
+    <link rel="stylesheet" type="text/css" href="~/Mycs/my.css" />
+    <script type="text/javascript" src="~/scripts/layui.js" ></script>
+    <script type="text/javascript" src="~/scripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="~/scripts/element.js"></script>
+    <script type="text/javascript" src="~/scripts/mobile.js"></script>
+    <script type="text/javascript" src="~/scripts/my.js"></script>
+</head>
+<body>
+    <div class="mtitle">
+        <div class="mtitle-text " id="main"  onclick="mtest(0,'main')"> <a href="~/Home/main"> 首页</a> </div>
+        <div class="mtitle-text" id="user"  onclick="mtest(1, 'user')">  <a href="~/My/my"> 我的</a> </div>
+        <div class="mtitle-text" id="reguser"  onclick="mtest(2, 'reguser')"> <a href="~/Registered/mReguser"> 注册</a> </div>
+        <div class="mtitle-text" id="login" onclick="mtest(3, 'login')"  ><a href="/Login/mlogin">登陆</a></div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <script>
+        function mtest(index,id) {
+            clickdivbackground(id, ["main", "user", "reguser", "login"],document)
+        }
+    </script>
+</body>
+</html>
